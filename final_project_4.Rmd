@@ -1,0 +1,60 @@
+---
+title: "Final Project 4: Report"
+author: Tina Teng
+output: html_document
+---
+
+```{r here, include=FALSE}
+here::i_am(
+  "final_project_4.Rmd"
+)
+```
+
+## Introduction 
+
+This dataset assesses various parameters affecting water quality for human consumption. Parameters include pH, hardness, total dissolved solids (TDS), chloramines, sulfates, conductivity, total organic carbon (TOC), trihalomethanes (THMs), and turbidity. Potability is rated 1 for safe and 0 for unsafe water. The report will focus on linear regression analysis to understand how each continuous variable influences potability, along with exploring relationships between continuous variables.
+
+## Statistical forms
+
+The summary statistics provide insights into the distribution and variability of the water quality parameters:
+
+* pH: The average pH level of the water samples is approximately 7.09, with a standard deviation of 1.57. pH values range from 0.23 to 14.00.
+
+* Hardness: The mean hardness is approximately 196, with a standard deviation of 32.64. Hardness levels range from 73.49 to 317.34.
+
+* Solids: The average total dissolved solids (TDS) concentration is approximately 21917 mg/L, with a standard deviation of 8642.24. TDS levels range from 320.94 to 56488.67 mg/L.
+
+* Chloramines: The mean chloramines level is approximately 7.13 mg/L, with a standard deviation of 1.58. Chloramines levels range from 1.39 to 13.13 mg/L.
+
+* Sulfate: The average sulfate level is approximately 333.22 mg/L, with a standard deviation of 41.21. Sulfate levels range from 129.00 to 481.03 mg/L.
+
+* Conductivity: The mean conductivity is approximately 426.53 µS/cm, with a standard deviation of 80.71. Conductivity values range from 201.62 to 753.34 µS/cm.
+
+* Organic Carbon: The average organic carbon content is approximately 14.36 mg/L, with a standard deviation of 3.33. Organic carbon levels range from 2.20 to 27.01 mg/L.
+
+* Trihalomethanes: The mean concentration of trihalomethanes is approximately 66.40 µg/L, with a standard deviation of 16.08. Trihalomethanes levels range from 8.58 to 124.00 µg/L.
+
+* Turbidity: The average turbidity level is approximately 3.97 NTU, with a standard deviation of 0.78. Turbidity values range from 1.45 to 6.49 NTU.
+
+```{r tables, echo=FALSE}
+readRDS(
+  file = here::here("final_output/table1.rds")
+)
+
+readRDS(
+  file = here::here("final_output/table2.rds")
+)
+```
+
+## Figure
+
+In this analysis, we created histograms for nine continuous variables relevant to water quality, distinguishing between potable and non-potable samples. The histograms reveal higher values for non-potable water across all parameters, indicating a distinct separation between the two categories.
+
+Additionally, while most variables follow a normal distribution, the histogram for total dissolved solids (TDS) is right-skewed. This skewness suggests that lower TDS levels are more common in the dataset, reflecting potential differences in water purity.
+
+```{r figure, echo=FALSE}
+#| fig.align = "center",
+knitr::include_graphics(
+  here::here("final_output/histo.png")
+)
+```
