@@ -20,3 +20,6 @@
   - reads both `.rds` tables created by `final_code/01_make_table.R`
   - read the histogram created by `final_code/02_make_hist.R`
   - produce the `.html` report 
+
+## How to produce report 
+`final_project_4.Rmd` is used to read both tables and the figure from the `final_output/` folder. Runs `final_code/03_render_report.R` to render `final_project_4.Rmd`. 
