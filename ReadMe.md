@@ -2,7 +2,7 @@
 
 `final_code/01_make_table.R`
 
-  - read the `water_postability.csv` 
+  - read the `water_potability.csv` 
   - Calculate summary statistics for continuous variables and round to 4 digits as the first `.rds` object in `final_output/` folder
   - Separate the continuous variables by the binomial variable `Postability` and produce summary statistics as the second `.rds` object in `final_output/` folder
 
