@@ -10,3 +10,6 @@ figure: final_code/02_make_hist.R water_potability.csv
 .PHONY: clean
 clean:
 	rm -f final_output/*.rds && rm -f final_output/*.png && rm -f report.html
+	
+install:
+	Rscript -e "renv::restore()"
