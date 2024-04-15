@@ -3,7 +3,7 @@ here::i_am(
 )
 
 water_data <- 
-  read.csv("/Users/macair/Desktop/data550/final_project/water_potability.csv", header = TRUE)
+  read.csv("water_potability.csv", header = TRUE)
 
 water_data <- na.omit(water_data)
 
