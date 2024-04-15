@@ -23,3 +23,6 @@
 
 ## How to produce report 
 `final_project_4.Rmd` is used to read both tables and the figure from the `final_output/` folder. Runs `final_code/03_render_report.R` to render `final_project_4.Rmd`. 
+
+## how to synchronize package repository
+When running `make install`, it executes an R script from the command line that calls `renv::restore()`, which reads the `renv.lock` file and installs all necessary packages as specified.
